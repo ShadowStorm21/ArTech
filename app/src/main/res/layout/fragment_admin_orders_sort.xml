@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RadioGroup
+        android:id="@+id/radioGroupFilterSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView84">
+
+        <RadioButton
+            android:id="@+id/radioButtonOrderAsce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date : Ascending" />
+
+        <RadioButton
+            android:id="@+id/radioButtonOrderDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date : Descending" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sort products by"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Filter by order status"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupFilterSort" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView75">
+
+        <RadioButton
+            android:id="@+id/radioButtonOrdered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ordered" />
+
+        <RadioButton
+            android:id="@+id/radioButtonProcessing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Processing" />
+
+        <RadioButton
+            android:id="@+id/radioButtonIndelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In Delivery" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSortDelivered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivered" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonApplyFilter"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:padding="12dp"
+        android:text="Apply"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupStatus" />
+
+    <Button
+        android:id="@+id/buttonClearOrdersFilter"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:padding="12dp"
+        android:text="Clear"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupStatus" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.49878347" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

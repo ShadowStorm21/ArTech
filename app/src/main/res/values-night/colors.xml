@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7e57c2</color>
+    <color name="colorPrimaryDark">#673ab7</color>
+    <color name="colorAccent">#b39ddb</color>
+    <color name="colorPrimary70">#B3673AB7</color>
+    <color name="colorPrimaryDark70">#B3512DA8</color>
+    <color name="colorAccent70">#B37C4DFF</color>
+    <color name="error_color">#CF6679</color>
+    <color name="edittextbackground">#121212</color>
+    <color name="edittextbackground1">#303030</color>
+    <color name="backgroundlogin">#121212</color>
+    <color name="black">#DEFFFFFF</color>
+    <color name="blackBottomDialog">#303030</color>
+    <color name="white">#303030</color>
+    <color name="fullwhite">#303030</color>
+    <color name="black70">#B3FFFFFF</color>
+    <color name="white70">#B31B1B1B</color>
+    <color name="toolbarColor">#121212</color>
+    <color name="graybackground">#121212</color>
+    <color name="graybackground1">#303030</color>
+    <color name="categorycolor">#303030</color>
+    <color name="textColorproduct">#B3FFFFFF</color>
+    <color name="imgbackground">#303030</color>
+    <color name="drawerColor">#212121</color>
+    <color name="ordersColor">#303030</color>
+    <color name="cartItemColor">#303030</color>
+    <color name="relatedItemColor">#303030</color>
+    <color name="saveOrder">#303030</color>
+    <color name="cardPaymentColor">#303030</color>
+    <color name="reviewBox">#DE212121</color>
+    <color name="statusBar">#121212</color>
+    <color name="fullblack">#FF000000</color>
+    <color name="strok">#212121</color>
+    <color name="strokcategory">#212121</color>
+    <color name="red1">#CF6679</color>
+</resources>

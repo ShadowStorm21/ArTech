@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="1080px"
+    android:layout_height="2160px"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

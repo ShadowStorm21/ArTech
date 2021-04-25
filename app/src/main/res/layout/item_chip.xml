@@ -1,0 +1,12 @@
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.Chip.Choice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_margin="8dp"
+    android:textAppearance="?android:attr/textAppearance"
+    android:textColor="@color/ColorPrimary"
+    app:chipBackgroundColor="#E6E6E6" />

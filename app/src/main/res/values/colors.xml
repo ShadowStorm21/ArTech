@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorAccent">#7C4DFF</color>
+    <color name="colorPrimary70">#B3b39ddb</color>
+    <color name="colorPrimaryDark70">#B39575cd</color>
+    <color name="colorAccent70">#B37e57c2</color>
+    <color name="error_color">#CF1F1F</color>
+    <color name="ColorPrimary">#212121</color>
+    <color name="ColorSecondary">#757575</color>
+    <color name="light_gray">#F0F5F5</color>
+    <color name="translucent_white">#80FFFFFF</color>
+    <color name="dark_gray">#243037</color>
+
+    <color name="light_blue">#59AAFF</color>
+    <color name="blue">#2C7DE3</color>
+    <color name="dark_blue">#1C6AC9</color>
+
+    <color name="green_continue">#1fc055</color>
+    <color name="chip_color">#d4edfa</color>
+    <color name="chip_inner_color">#e0e4e4</color>
+    <color name="chip_yellow_color">#fbe191</color>
+    <color name="chip_yellow_inner_color">#eed280</color>
+
+    <color name="purple_color">#5515a9</color>
+    <color name="purple_color_gradient">#651dc4</color>
+
+    <color name="green_color">#108b4c</color>
+    <color name="green_color_gradient">#1caf57</color>
+
+    <color name="blue_color">#5D8BF2</color>
+    <color name="blue_color_gradient">#3545AE</color>
+
+    <color name="pink_color">#d04c84</color>
+    <color name="pink_color_gradient">#d04882</color>
+
+    <color name="default_color">#363434</color>
+    <color name="default_color_gradient">#434141</color>
+    <color name="toolbar">#d1c4e9</color>
+    <color name="brown_color">#800000</color>
+    <color name="brown_color_gradient">#A52A2A</color>
+    <color name="sky_blue_light">#CAEEEA</color>
+    <color name="red1">#CF1F1F</color>
+    <color name="edittextbackground">#FFFFFF</color>
+    <color name="edittextbackground1">#FFFFFF</color>
+    <color name="fullwhite">#FFFFFFFF</color>
+    <color name="backgroundlogin">#FFFFFF</color>
+    <color name="black">#DE000000</color>
+    <color name="white">#DEFFFFFF</color>
+    <color name="black70">#B3000000</color>
+    <color name="white70">#B3FFFFFF</color>
+    <color name="toolbarColor">#FFFFFF</color>
+    <color name="graybackground">#FAFAFA</color>
+    <color name="graybackground1">#FAFAFA</color>
+    <color name="categorycolor">#F1F1F1</color>
+    <color name="textColorproduct">#212121</color>
+    <color name="imgbackground">#FFFFFF</color>
+    <color name="drawerColor">#FFFFFF</color>
+    <color name="cartItemColor">#FFFFFF</color>
+    <color name="ordersColor">#FFFFFF</color>
+    <color name="relatedItemColor">#FAFAFA</color>
+    <color name="saveOrder">#E8E8E8</color>
+    <color name="cardPaymentColor">#FFFFFF</color>
+    <color name="reviewBox">#e0e0e0</color>
+    <color name="blackBottomDialog">#FFFFFF</color>
+    <color name="statusBar">@android:color/darker_gray</color>
+    <color name="fullblack">#FFFFFFFF</color>
+    <color name="strok">#DEFFFFFF</color>
+    <color name="strokcategory">#B3FAFAFA</color>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".Activities.ARActivity">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutArColors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:text="Colors"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageViewARWhite"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_fiber_manual_record_24_white" />
+
+        <ImageView
+            android:id="@+id/imageViewARblack"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_fiber_manual_record_24_black"
+            tools:srcCompat="@drawable/ic_baseline_fiber_manual_record_24_black" />
+
+        <ImageView
+            android:id="@+id/imageViewARGold"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_fiber_manual_record_24_gold" />
+
+        <ImageView
+            android:id="@+id/imageViewARBlue"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_fiber_manual_record_24_blue" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonResetSession"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:drawableTint="#FFFFFF"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="Reset"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_outline_refresh_24"
+            app:iconGravity="textEnd"
+            app:iconPadding="4dp"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonHelpAr"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:drawableTint="#FFFFFF"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            android:text="Help"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_baseline_help_outline_24"
+            app:iconGravity="textEnd"
+            app:iconPadding="4dp"
+            app:iconTint="#FFFFFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutArColors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="Scale"
+            android:textColor="#FDFDFD"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonDecreaseScale"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_format_size_24"
+            app:tint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonIncreaseScale"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:insetLeft="6dp"
+            android:insetRight="6dp"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="#FDFDFD" />
+
+        <Button
+            android:id="@+id/buttonRotate"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="Rotate"
+            android:textColor="#FFFFFF"
+            app:icon="@drawable/ic_baseline_rotate_90_degrees_ccw_24"
+            app:iconGravity="textEnd"
+            app:iconTint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

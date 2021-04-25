@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.AddCardActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarColor"
+            app:elevation="2dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/toolbarColor"
+                app:titleTextColor="@color/black" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:alpha="0"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_gradient"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:id="@+id/text_card_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_card_number"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="16sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_expired_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_expired_date"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/text_cvv_code"
+                            app:layout_constraintTop_toBottomOf="@+id/text_card_number" />
+
+                        <TextView
+                            android:id="@+id/text_card_holder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_card_holder"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/text_expired_date" />
+
+                        <TextView
+                            android:id="@+id/text_cvv_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:ellipsize="end"
+                            android:inputType="numberPassword"
+                            android:maxLines="1"
+                            android:text="@string/label_cvv_code"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_expired_date"
+                            app:layout_constraintRight_toLeftOf="@+id/icon_help_blue"
+                            app:layout_constraintTop_toTopOf="@+id/text_expired_date" />
+
+                        <ImageView
+                            android:id="@+id/icon_help_blue"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_expired_date"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/text_expired_date"
+                            app:srcCompat="@drawable/ic_outline_help_outline_24" />
+
+                        <ImageView
+                            android:id="@+id/imageViewType"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/icon_help_blue"
+                            app:layout_constraintHorizontal_bias="0.948"
+                            app:layout_constraintStart_toEndOf="@+id/text_card_holder"
+                            app:layout_constraintTop_toBottomOf="@+id/icon_help_blue"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:srcCompat="@drawable/ic_billing_visa_logo" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:alpha="1"
+                    android:visibility="visible"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_gray"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:id="@+id/label_card_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_card_number"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="16sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/label_expired_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginRight="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_expired_date"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/label_cvv_code"
+                            app:layout_constraintTop_toBottomOf="@+id/label_card_number" />
+
+                        <TextView
+                            android:id="@+id/label_card_holder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_card_holder"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/label_expired_date" />
+
+                        <TextView
+                            android:id="@+id/label_cvv_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/label_cvv_code"
+                            android:textAllCaps="true"
+                            android:textColor="@color/light_gray"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            app:layout_constraintBottom_toBottomOf="@+id/label_expired_date"
+                            app:layout_constraintRight_toLeftOf="@+id/icon_help_gray"
+                            app:layout_constraintTop_toTopOf="@+id/label_expired_date" />
+
+                        <ImageView
+                            android:id="@+id/icon_help_gray"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:tint="@color/colorPrimary"
+                            app:layout_constraintBottom_toBottomOf="@+id/label_expired_date"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/label_expired_date"
+                            app:srcCompat="@drawable/ic_outline_help_outline_24" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_blue"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_card_number"
+                    app:boxBackgroundColor="@color/edittextbackground"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconDrawable="@drawable/ic_baseline_help_outline_24"
+                    app:endIconMode="custom"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/hint_appearance"
+                    app:startIconDrawable="@drawable/ic_scan">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_edit_card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:imeOptions="actionUnspecified|actionNext"
+                        android:inputType="number|phone"
+                        android:maxLength="19"
+                        android:padding="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_expired_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_card_number"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_expired_date"
+                    app:boxBackgroundColor="@color/edittextbackground"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconDrawable="@drawable/ic_baseline_help_outline_24"
+                    app:endIconMode="custom"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_edit_expired_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="date"
+                        android:maxLength="5"
+                        android:padding="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_card_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_expired_date"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_card_holder"
+                    app:boxBackgroundColor="@color/edittextbackground"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconDrawable="@drawable/ic_baseline_help_outline_24"
+                    app:endIconMode="custom"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_edit_card_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName|textCapCharacters|textNoSuggestions"
+                        android:maxLength="8"
+                        android:padding="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_cvv_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_layout_card_holder"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/hint_cvv_code"
+                    app:boxBackgroundColor="@color/edittextbackground"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:endIconDrawable="@drawable/ic_baseline_help_outline_24"
+                    app:endIconMode="custom"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/hint_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_edit_cvv_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+                        android:maxLength="3"
+                        android:padding="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <ProgressBar
+                    android:id="@+id/progress_circle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/input_layout_cvv_code"
+                    android:layout_alignStart="@+id/input_layout_cvv_code"
+                    android:layout_alignEnd="@+id/input_layout_cvv_code"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/buttonAddCard"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/progress_circle"
+                    android:layout_alignStart="@+id/progress_circle"
+                    android:layout_alignEnd="@+id/progress_circle"
+                    android:layout_marginTop="22dp"
+                    android:text="Add Card"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/buttonDeleteCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/buttonAddCard"
+                    android:layout_alignStart="@+id/progress_circle"
+                    android:layout_alignEnd="@+id/progress_circle"
+                    android:text="Delete Card"
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/buttonUpdateCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/progress_circle"
+                    android:layout_alignStart="@+id/progress_circle"
+                    android:layout_alignEnd="@+id/progress_circle"
+                    android:text="Update Card"
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    app:cornerRadius="10dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

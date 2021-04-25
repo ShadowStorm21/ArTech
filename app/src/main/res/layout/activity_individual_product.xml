@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarIndivdualProduct"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/toolbarColor"
+        app:titleTextColor="@color/black"
+        android:elevation="3dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarIndivdualProduct"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:adjustViewBounds="true"
+                >
+
+                <ImageView
+                    android:id="@+id/productImageRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ic_baseline_smartphone_24" />
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                app:dotsColor="#e0e0e0"
+                app:dotsCornerRadius="14dp"
+                app:dotsSize="10dp"
+                app:dotsSpacing="4dp"
+                app:dotsWidthFactor="2.5"
+                app:progressMode="true"
+                app:selectedDotColor="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewProductNameRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="TextView"
+                    android:textColor="@color/textColorproduct"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/textViewProductBrandRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="TextView"
+                    android:textColor="@color/ColorSecondary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textViewProductStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="In Stock"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@android:style/Widget.Material.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:max="5" />
+
+                    <TextView
+                        android:id="@+id/textViewReviewsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="( 0 )"
+                        android:textColor="@color/ColorSecondary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewProductPriceRecent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:letterSpacing="0.1"
+                        android:padding="2dp"
+                        android:text="TextView"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/textColorproduct"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Color"
+                    android:textColor="@color/textColorproduct"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollViewColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/colorChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="horizontal"
+                            app:chipSpacingHorizontal="12dp"
+                            app:singleLine="true"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipColorBlack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="Black"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipColorWhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="White"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipColorGold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="Gold"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipColorBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="Blue"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewConfigartion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Configuration"
+                    android:textColor="@color/textColorproduct"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/storageChipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:chipSpacingHorizontal="12dp"
+                            app:singleLine="true"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipConfigration2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="128GB"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipConfigration3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="256GB"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipConfigration4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:checkable="true"
+                                android:text="512GB"
+                                app:checkedIcon="@drawable/ic_baseline_check_circle_outline_24"
+                                app:checkedIconVisible="true" />
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonDecreaseQuantity"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_baseline_remove_24"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/black"
+                    app:strokeColor="@color/cartItemColor" />
+
+                <TextView
+                    android:id="@+id/textViewQuantityProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColorproduct"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonIncreaseQuantity"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_baseline_add_24"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:rippleColor="@color/black"
+                    app:strokeColor="@color/cartItemColor" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonAddToCart"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="Add to Cart"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/ic_outline_add_shopping_cart_24"
+                        app:iconGravity="textStart"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/buttonBuy"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="Buy it now"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/ic_baseline_add_24"
+                        app:iconGravity="textStart" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <host.stjin.expandablecardview.ExpandableCardView
+                android:id="@+id/expandableDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                app:expandableCardRipple="true"
+                app:expandableCardArrowColor="@color/black"
+                app:expandableCardTitleColor="@color/black"
+                app:animationDuration="500"
+                app:expandableCardColor="@color/backgroundlogin"
+                app:expandOnClick="true"
+                app:expandableCardTitleSize="16sp"
+                app:inner_view="@layout/description_layout"
+                app:title="Product Description">
+
+            </host.stjin.expandablecardview.ExpandableCardView>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="?android:attr/listDivider" />
+
+            <host.stjin.expandablecardview.ExpandableCardView
+                android:id="@+id/expandableReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:expandOnClick="true"
+                app:expandableCardRipple="true"
+                app:expandableCardColor="@color/backgroundlogin"
+                app:expandableCardArrowColor="@color/black"
+                app:expandableCardTitleColor="@color/black"
+                app:animationDuration="500"
+                app:expandableCardTitleSize="16sp"
+                app:inner_view="@layout/reviews_layout"
+                app:title="Product Reviews">
+
+            </host.stjin.expandablecardview.ExpandableCardView>
+
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout69"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewRelated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Related Products"
+                    android:textColor="@color/textColorproduct"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/relatedProductRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

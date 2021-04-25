@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/aldrich</item>
+        <item>@font/baumans</item>
+        <item>@font/dawning_of_a_new_day</item>
+        <item>@font/jockey_one</item>
+        <item>@font/lato_bold</item>
+        <item>@font/lilita_one</item>
+        <item>@font/montserrat</item>
+        <item>@font/noto_sans</item>
+        <item>@font/nunito_sans_semibold</item>
+        <item>@font/nunito_semibold</item>
+        <item>@font/open_sans</item>
+        <item>@font/open_sans_bold</item>
+        <item>@font/open_sans_condensed_bold</item>
+        <item>@font/open_sans_light</item>
+        <item>@font/open_sans_semibold</item>
+        <item>@font/oxygen_bold</item>
+        <item>@font/roboto_bold</item>
+        <item>@font/roboto_medium</item>
+        <item>@font/sniglet</item>
+    </array>
+</resources>

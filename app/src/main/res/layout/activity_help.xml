@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activities.HelpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbarColor"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextColor="@color/black"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewTitleApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="368dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Artech"
+        android:textColor="@color/textColorproduct"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewTMTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TM"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitleApp"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitleApp"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="216dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_outline_shop_24_black"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Version 1.5"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleApp" />
+
+    <TextView
+        android:id="@+id/textViewCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Copyright 2021, Artech, All rights reserved."
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVersion" />
+
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/ColorPrimary"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6"
+        app:title="Pricing">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ1"
+        app:title="Searching and Browsing for items">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ2"
+        app:title="Items Availability">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ3"
+        app:title="Accepted Credit/Debit Cards">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ4"
+        app:title="Redeem Promotional Codes">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ6"
+        style="@style/panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ5"
+        app:title="Artech and Your Data"></host.stjin.expandablecardview.ExpandableCardView>
+
+
+    <host.stjin.expandablecardview.ExpandableCardView
+        android:id="@+id/expandableQ7"
+        style="@style/panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        app:animationDuration="500"
+        app:expandOnClick="true"
+        app:expandableCardArrowColor="@color/black"
+        app:expandableCardColor="@color/backgroundlogin"
+        app:expandableCardRipple="true"
+        app:expandableCardTitleColor="@color/black"
+        app:expandableCardTitleSize="16sp"
+        app:inner_view="@layout/layout_help6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableQ6"
+        app:title="Shipping and Delivery Fees">
+
+    </host.stjin.expandablecardview.ExpandableCardView>
+
+    <TextView
+        android:id="@+id/textViewTOShelp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@color/graybackground1"
+        android:text="@string/_1_certain_of_our_services_or_portions_of_our_service_require_you_to_be_18_years_of_age_or_older_so_please_read_all_notices_and_any_additional_terms_carefully_when_you_access_the_services_n_n2_to_use_artech_features_you_need_to_create_an_account_and_provide_us_with_username_password_and_certain_other_information_about_yourself_n_n3_there_are_no_fees_for_the_use_of_many_aspect_of_our_services_however_some_services_including_purchasing_products_and_goods_may_be_available_for_purchase_n_n4_you_may_submit_your_debit_credit_card_or_other_payment_information_to_purchase_the_goods_we_use_third_party_service_providers_to_process_your_payment_information_if_you_submit_your_payment_information_you_agree_to_pay_all_costs_that_incur"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splashView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="person.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/textViewAuthorDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Developed by : Ahmed Al-Nabhani"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashView" />
+
+    <TextView
+        android:id="@+id/textViewUniv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="University of Technology and Applied Science"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailHelp" />
+
+    <TextView
+        android:id="@+id/textView2021"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="2021, All rights reserved."
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUniv" />
+
+    <TextView
+        android:id="@+id/textViewEmailHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email : ahmednab24@gmail.com"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAuthorDev" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

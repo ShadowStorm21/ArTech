@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mycourseprojectapplication.Fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.mycourseprojectapplication.Fragments.OrdersFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_Orders" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.mycourseprojectapplication.Fragments.ProfileFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/customer_support"
+        android:name="com.example.mycourseprojectapplication.Fragments.CustomerSupportFragment"
+        android:label="Customer Service"
+        tools:layout="@layout/fragment_customer_support" />
+    <fragment
+        android:id="@+id/help"
+        android:name="com.example.mycourseprojectapplication.Fragments.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.mycourseprojectapplication.Fragments.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.example.mycourseprojectapplication.Fragments.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.mycourseprojectapplication.Activities.SettingsActivity"
+        android:label="SettingsActivity" />
+    <activity
+        android:id="@+id/scanQRActivity"
+        android:name="com.example.mycourseprojectapplication.Activities.ScanQRActivity"
+        android:label="activity_scan_q_r"
+        tools:layout="@layout/activity_scan_q_r" />
+</navigation>
